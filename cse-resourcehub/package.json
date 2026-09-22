@@ -1,0 +1,18 @@
+{
+  "name": "cse-resourcehub",
+  "version": "1.0.0",
+  "description": "Academic resource management system for the CSE Department, MSU Baroda",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seed.js"
+  },
+  "author": "Neel Prajapati",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "multer": "^2.0.2"
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | CSE ResourceHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="navbar" class="navbar"></header>
+
+  <main class="container">
+    <div class="auth-wrapper">
+      <div class="auth-card">
+        <h1>Welcome back 👋</h1>
+        <p>Login with your email or PRN to access your study material.</p>
+
+        <form id="login-form" novalidate>
+          <div class="form-message"></div>
+          <div class="form-group">
+            <label for="login-id">Email or PRN</label>
+            <input type="text" id="login-id" placeholder="you@example.com or 10-digit PRN" autocomplete="username">
+            <small class="field-error"></small>
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" placeholder="Your password" autocomplete="current-password">
+            <small class="field-error"></small>
+          </div>
+          <button type="submit" class="btn btn-block">Login</button>
+        </form>
+
+        <p class="auth-switch">New here? <a href="register.html">Create an account</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer" class="footer"></footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

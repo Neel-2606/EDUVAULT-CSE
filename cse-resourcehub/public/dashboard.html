@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | CSE ResourceHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="navbar" class="navbar"></header>
+
+  <main class="container">
+    <!-- Greeting -->
+    <div class="page-header">
+      <div>
+        <h1 id="greeting">Welcome!</h1>
+        <p id="greeting-details"></p>
+      </div>
+      <div id="faculty-actions" class="hidden">
+        <a href="manage-students.html" class="btn">👥 Manage Students</a>
+      </div>
+    </div>
+
+    <!-- Global search -->
+    <form id="search-form" class="search-bar">
+      <input type="text" id="search-input" placeholder="🔍 Search files and folders, e.g. Unit 1, 2024, syllabus...">
+      <select id="search-year">
+        <option value="">All years</option>
+        <option value="1">1st Year</option>
+        <option value="2">2nd Year</option>
+        <option value="3">3rd Year</option>
+        <option value="4">4th Year</option>
+      </select>
+      <button type="submit" class="btn">Search</button>
+    </form>
+    <div id="search-results-area" style="display:none">
+      <h2 class="section-title">Search results <button type="button" class="icon-btn" id="search-clear">✖ Clear</button></h2>
+      <div id="search-results"></div>
+    </div>
+
+    <!-- Year cards -->
+    <h2 class="section-title">Browse by Year</h2>
+    <div id="year-cards" class="grid-4"></div>
+
+    <!-- Recent uploads -->
+    <h2 class="section-title">🕒 Recent Uploads</h2>
+    <div id="recent-list"></div>
+  </main>
+
+  <footer id="footer" class="footer"></footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | CSE ResourceHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="navbar" class="navbar"></header>
+
+  <main class="container">
+    <div class="auth-wrapper">
+      <div class="auth-card">
+        <h1>Create account</h1>
+        <p>Join the CSE Department resource portal.</p>
+
+        <!-- Student / Faculty tabs -->
+        <div class="section-tabs">
+          <button type="button" class="section-tab active" data-section="material" data-form="student-form">🎒 Student</button>
+          <button type="button" class="section-tab" data-section="other" data-form="faculty-form">👩‍🏫 Faculty</button>
+        </div>
+
+        <!-- Student form -->
+        <form id="student-form" class="register-form" novalidate>
+          <div class="form-message"></div>
+          <div class="form-group">
+            <label for="s-name">Full Name</label>
+            <input type="text" id="s-name" placeholder="e.g. Neel Prajapati">
+            <small class="field-error"></small>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="s-prn">PRN</label>
+              <input type="text" id="s-prn" placeholder="10-digit PRN" maxlength="10" inputmode="numeric">
+              <small class="field-error"></small>
+            </div>
+            <div class="form-group">
+              <label for="s-admission">Admission Year (Batch)</label>
+              <select id="s-admission"></select>
+              <small class="field-error"></small>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="s-email">Email</label>
+            <input type="email" id="s-email" placeholder="you@example.com">
+            <small class="field-error"></small>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="s-password">Password</label>
+              <input type="password" id="s-password" placeholder="Min. 6 characters">
+              <small class="field-error"></small>
+            </div>
+            <div class="form-group">
+              <label for="s-confirm">Confirm Password</label>
+              <input type="password" id="s-confirm" placeholder="Type again">
+              <small class="field-error"></small>
+            </div>
+          </div>
+          <p class="hint" style="margin-bottom:12px">Your year of study is updated automatically every July.</p>
+          <button type="submit" class="btn btn-block">Register as Student</button>
+        </form>
+
+        <!-- Faculty form -->
+        <form id="faculty-form" class="register-form hidden" novalidate>
+          <div class="form-message"></div>
+          <div class="form-group">
+            <label for="f-name">Full Name</label>
+            <input type="text" id="f-name" placeholder="e.g. Dr. A. Shah">
+            <small class="field-error"></small>
+          </div>
+          <div class="form-group">
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" placeholder="name@msubaroda.ac.in">
+            <small class="field-error"></small>
+          </div>
+          <div class="form-group">
+            <label for="f-code">Faculty Secret Code</label>
+            <input type="password" id="f-code" placeholder="Given by the department">
+            <small class="field-error"></small>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-password">Password</label>
+              <input type="password" id="f-password" placeholder="Min. 6 characters">
+              <small class="field-error"></small>
+            </div>
+            <div class="form-group">
+              <label for="f-confirm">Confirm Password</label>
+              <input type="password" id="f-confirm" placeholder="Type again">
+              <small class="field-error"></small>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-block">Register as Faculty</button>
+        </form>
+
+        <p class="auth-switch">Already have an account? <a href="login.html">Login</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer" class="footer"></footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

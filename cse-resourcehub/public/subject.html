@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subject | CSE ResourceHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="navbar" class="navbar"></header>
+
+  <main class="container" id="subject-page">
+    <!-- Subject header -->
+    <div class="subject-header">
+      <h1><span id="subject-name">Loading...</span> <span class="badge badge-code" id="subject-code"></span></h1>
+      <p id="subject-info"></p>
+    </div>
+
+    <!-- The 3 fixed sections -->
+    <div class="section-tabs">
+      <button class="section-tab" data-section="material">📘 Study Material</button>
+      <button class="section-tab" data-section="pyq">📝 PYQs</button>
+      <button class="section-tab" data-section="other">📢 Other</button>
+    </div>
+
+    <div id="info-banner" class="info-banner hidden"></div>
+    <nav id="breadcrumb" class="breadcrumb"></nav>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+      <input type="text" id="search-box" placeholder="🔍 Search in this folder">
+      <select id="sort-select">
+        <option value="name">Sort: Name</option>
+        <option value="date">Sort: Newest</option>
+        <option value="size">Sort: Size</option>
+      </select>
+      <div class="view-toggle">
+        <button data-view="list" title="List view">☰</button>
+        <button data-view="grid" title="Grid view">▦</button>
+      </div>
+      <button class="btn btn-outline hidden" id="new-folder-btn">+ New Folder</button>
+      <button class="btn hidden" id="upload-btn">⬆ Upload Files</button>
+    </div>
+
+    <!-- Folders and files -->
+    <div id="entries" class="entries list-view"></div>
+  </main>
+
+  <!-- New folder / rename -->
+  <div class="modal" id="name-modal">
+    <form class="modal-box" id="name-form" novalidate>
+      <div class="modal-head">
+        <h3 id="name-modal-title">New Folder</h3>
+        <button type="button" class="modal-close" data-close="name-modal">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="name-input">Name</label>
+          <input type="text" id="name-input" maxlength="60" placeholder="e.g. Unit 1 or 2025">
+          <small class="field-error" id="name-error"></small>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button type="button" class="btn btn-grey" data-close="name-modal">Cancel</button>
+        <button type="submit" class="btn">Save</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Upload files -->
+  <div class="modal" id="upload-modal">
+    <div class="modal-box">
+      <div class="modal-head">
+        <h3>Upload Files</h3>
+        <button type="button" class="modal-close" data-close="upload-modal">×</button>
+      </div>
+      <div class="modal-body">
+        <p class="small muted" style="margin-bottom:10px">Uploading to: <strong id="upload-target"></strong></p>
+        <div class="drop-zone" id="drop-zone">
+          <div class="big-icon">📤</div>
+          <p><strong>Click to choose</strong> or drag &amp; drop files here</p>
+          <p class="hint">PDF, PPT, DOC, XLS, TXT, JPG, PNG, ZIP, RAR · max 25 MB each · up to 10 files</p>
+        </div>
+        <input type="file" id="file-input" multiple hidden
+               accept=".pdf,.ppt,.pptx,.doc,.docx,.xls,.xlsx,.txt,.jpg,.jpeg,.png,.zip,.rar">
+        <ul class="selected-files" id="selected-files"></ul>
+        <div id="progress-area" class="hidden">
+          <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
+          <div class="progress-text" id="progress-text">0%</div>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button type="button" class="btn btn-grey" id="cancel-upload" data-close="upload-modal">Cancel</button>
+        <button type="button" class="btn" id="start-upload" disabled>Upload</button>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer" class="footer"></footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/subject.js"></script>
+</body>
+</html>

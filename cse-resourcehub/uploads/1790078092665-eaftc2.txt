@@ -1,0 +1,6 @@
+Operating Systems (CSE3501)
+Semester 5
+
+Unit 1: Introduction
+Unit 2: Core concepts
+Unit 3: Applications

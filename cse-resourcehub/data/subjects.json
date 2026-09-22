@@ -1,0 +1,42 @@
+[
+  {
+    "id": "mucma06t5cuz",
+    "name": "Programming in C",
+    "code": "CSE1101",
+    "year": 1,
+    "semester": 1,
+    "facultyName": "Dr. A. Shah",
+    "createdBy": "mucm9zv9etn4",
+    "createdAt": "2026-09-22T02:36:52.661Z"
+  },
+  {
+    "id": "mucma06uqpil",
+    "name": "Basic Web Programming",
+    "code": "CSE2301",
+    "year": 2,
+    "semester": 3,
+    "facultyName": "Dr. A. Shah",
+    "createdBy": "mucm9zv9etn4",
+    "createdAt": "2026-09-22T04:07:52.662Z"
+  },
+  {
+    "id": "mucma06wiy9o",
+    "name": "Data Structures",
+    "code": "CSE2302",
+    "year": 2,
+    "semester": 3,
+    "facultyName": "Prof. R. Mehta",
+    "createdBy": "mucm9zxobidi",
+    "createdAt": "2026-09-22T05:38:52.664Z"
+  },
+  {
+    "id": "mucma06xw54t",
+    "name": "Operating Systems",
+    "code": "CSE3501",
+    "year": 3,
+    "semester": 5,
+    "facultyName": "Prof. R. Mehta",
+    "createdBy": "mucm9zxobidi",
+    "createdAt": "2026-09-22T07:09:52.665Z"
+  }
+]

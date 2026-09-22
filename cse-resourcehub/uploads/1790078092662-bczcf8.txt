@@ -1,0 +1,6 @@
+Basic Web Programming (CSE2301)
+Semester 3
+
+Unit 1: Introduction
+Unit 2: Core concepts
+Unit 3: Applications

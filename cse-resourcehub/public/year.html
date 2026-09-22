@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Year | CSE ResourceHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="navbar" class="navbar"></header>
+
+  <main class="container">
+    <div class="page-header">
+      <div>
+        <p><a href="dashboard.html">← Dashboard</a></p>
+        <h1 id="year-title">Year</h1>
+        <p>Choose a subject to open its Study Material, PYQs and Other files.</p>
+      </div>
+    </div>
+
+    <!-- One column per semester (filled by year.js) -->
+    <div class="sem-columns">
+      <section class="sem-column">
+        <h2><span class="sem-name">Semester</span> <button class="btn btn-sm add-subject-btn hidden">+ Add Subject</button></h2>
+        <div class="sem-subjects"></div>
+      </section>
+      <section class="sem-column">
+        <h2><span class="sem-name">Semester</span> <button class="btn btn-sm add-subject-btn hidden">+ Add Subject</button></h2>
+        <div class="sem-subjects"></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Add / Edit subject (faculty only) -->
+  <div class="modal" id="subject-modal">
+    <form class="modal-box" id="subject-form" novalidate>
+      <div class="modal-head">
+        <h3 id="subject-modal-title">Add Subject</h3>
+        <button type="button" class="modal-close" data-close="subject-modal">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="subject-name">Subject Name</label>
+          <input type="text" id="subject-name" maxlength="60" placeholder="e.g. Basic Web Programming">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="subject-code">Subject Code (optional)</label>
+            <input type="text" id="subject-code" maxlength="15" placeholder="e.g. CSE2301">
+          </div>
+          <div class="form-group">
+            <label for="subject-semester">Semester</label>
+            <select id="subject-semester"></select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject-faculty">Faculty In-charge</label>
+          <input type="text" id="subject-faculty" maxlength="60">
+        </div>
+        <p class="hint">Study Material, PYQs and Other sections are created automatically.</p>
+        <small class="field-error" id="subject-error"></small>
+      </div>
+      <div class="modal-foot">
+        <button type="button" class="btn btn-grey" data-close="subject-modal">Cancel</button>
+        <button type="submit" class="btn">Save</button>
+      </div>
+    </form>
+  </div>
+
+  <footer id="footer" class="footer"></footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/year.js"></script>
+</body>
+</html>

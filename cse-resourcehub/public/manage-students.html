@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Students | CSE ResourceHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="navbar" class="navbar"></header>
+
+  <main class="container">
+    <div class="page-header">
+      <div>
+        <h1>👥 Manage Students</h1>
+        <p>Turn on the switch to let a student upload papers in the PYQs section of every subject.</p>
+      </div>
+      <span class="badge badge-code" id="student-count"></span>
+    </div>
+
+    <div class="search-bar" style="margin-bottom:14px">
+      <input type="text" id="student-search" placeholder="🔍 Search by name or PRN">
+      <select id="year-filter">
+        <option value="">All years</option>
+        <option value="1">1st Year</option>
+        <option value="2">2nd Year</option>
+        <option value="3">3rd Year</option>
+        <option value="4">4th Year</option>
+      </select>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Name</th><th>PRN</th><th>Email</th><th>Batch</th><th>Current Year</th><th>PYQ Upload</th></tr>
+        </thead>
+        <tbody id="students-body">
+          <tr><td colspan="6" class="muted" style="text-align:center">Loading...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer id="footer" class="footer"></footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/students.js"></script>
+</body>
+</html>
