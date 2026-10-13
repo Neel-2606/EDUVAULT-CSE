@@ -1,42 +1,42 @@
 [
   {
-    "id": "mucxgrf1s0zf",
+    "id": "mv6dvfvzjens",
     "name": "Programming in C",
     "code": "CSE1101",
     "year": 1,
     "semester": 1,
     "facultyName": "Dr. A. Shah",
-    "createdBy": "mucxgr5ozqcv",
-    "createdAt": "2026-09-22T07:50:03.661Z"
+    "createdBy": "mv6dvfnfyycc",
+    "createdAt": "2026-10-12T22:34:41.519Z"
   },
   {
-    "id": "mucxgrf33sfj",
+    "id": "mv6dvfw0w6x9",
     "name": "Basic Web Programming",
     "code": "CSE2301",
     "year": 2,
     "semester": 3,
     "facultyName": "Dr. A. Shah",
-    "createdBy": "mucxgr5ozqcv",
-    "createdAt": "2026-09-22T09:21:03.663Z"
+    "createdBy": "mv6dvfnfyycc",
+    "createdAt": "2026-10-13T00:05:41.520Z"
   },
   {
-    "id": "mucxgrf7sen8",
+    "id": "mv6dvfw2yyro",
     "name": "Data Structures",
     "code": "CSE2302",
     "year": 2,
     "semester": 3,
     "facultyName": "Prof. R. Mehta",
-    "createdBy": "mucxgr7yuj4s",
-    "createdAt": "2026-09-22T10:52:03.667Z"
+    "createdBy": "mv6dvfpbms2w",
+    "createdAt": "2026-10-13T01:36:41.522Z"
   },
   {
-    "id": "mucxgrf8q9l7",
+    "id": "mv6dvfw2x0ie",
     "name": "Operating Systems",
     "code": "CSE3501",
     "year": 3,
     "semester": 5,
     "facultyName": "Prof. R. Mehta",
-    "createdBy": "mucxgr7yuj4s",
-    "createdAt": "2026-09-22T12:23:03.668Z"
+    "createdBy": "mv6dvfpbms2w",
+    "createdAt": "2026-10-13T03:07:41.522Z"
   }
 ]

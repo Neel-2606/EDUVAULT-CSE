@@ -7,7 +7,7 @@
     "start": "node server.js",
     "seed": "node seed.js"
   },
-  "author": "Neel Prajapati",
+  "author": "Neel, Sumit, Krushit, Aryan",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",

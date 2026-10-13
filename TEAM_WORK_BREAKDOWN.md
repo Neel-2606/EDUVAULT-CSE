@@ -1,38 +1,52 @@
 # 🎓 CSE ResourceHub - Team Work Breakdown
 
-This document outlines the division of work among our 4-person team for the **Basics of Web Programming** lab project. The work has been equally divided to ensure each team member contributed significantly to both the core requirements of the subject and the advanced features of the project.
+This document outlines the division of work among our **4-person team** for the **Basics of Web Programming (BWP)** lab project. The project was divided into four distinct pillars—**Structure (HTML/CSS), Interactivity (Client JS), Server Logic (Express), and Data/Files (Node fs/Multer)**—ensuring each team member contributed equally to both syllabus requirements and advanced full-stack functionality.
 
 ---
 
-## 🧑‍💻 Team Member 1: UI/UX & Frontend Architecture (HTML5 & CSS3)
+## 👥 Team Roster & Role Assignment
+
+| Role | Pillar & Focus Area | Team Member |
+|---|---|---|
+| **Member 1** | UI/UX & Frontend Architecture (HTML5 & CSS3) | **Neel** |
+| **Member 2** | Frontend Interactivity & DOM (JavaScript & jQuery) | **Sumit** |
+| **Member 3** | Backend Logic, Routing & Authentication (Node.js & Express) | **Krushit** |
+| **Member 4** | Data Management & File Processing (JSON DB & Multer) | **Aryan** |
+
+---
+
+## 🧑‍💻 Team Member 1 (Neel): UI/UX & Frontend Architecture (HTML5 & CSS3)
 **Focus:** Visual design, responsive layouts, and overall user experience.
-*   **Core Layouts:** Designed and developed the HTML structure for all main pages (`index.html`, `login.html`, `dashboard.html`, `year.html`).
-*   **Styling & CSS:** Implemented the entire design system in `style.css` using modern CSS Grid and Flexbox techniques, avoiding the need for external CSS frameworks to strictly adhere to "Basics of Web Programming" principles.
-*   **Responsiveness:** Ensured the web application is fully responsive and works flawlessly on mobile devices (down to 375px) using CSS media queries.
-*   **UI Components:** Designed the interactive elements like the file explorer grid/list views, navigation bar, and custom cards for subjects.
+*   **Core Layouts:** Designed and developed the semantic HTML5 structure for all 9 application pages:
+    *   Public & Authentication: `index.html` (Landing), `about.html`, `login.html`, `register.html`
+    *   Application Core: `dashboard.html`, `year.html` (Semesters), `subject.html` (File Explorer), `manage-students.html`, `profile.html`
+*   **Styling & Design System:** Implemented the complete design system in `style.css` using modern CSS Grid, Flexbox, and CSS Custom Properties (`:root` tokens for palette, shadows, radius), strictly avoiding external CSS frameworks (Bootstrap/Tailwind) to adhere to BWP core fundamentals.
+*   **Mobile Responsiveness:** Built a fully responsive layout with custom media queries (down to 375px mobile screens), including a collapsing mobile navigation drawer and responsive horizontal-scroll tables.
+*   **UI Components:** Designed cards, tabs, modal overlays, file drop zones, breadcrumb navigation, and grid/list explorer views.
 
-## 🧑‍💻 Team Member 2: Frontend Interactivity & DOM Manipulation (JavaScript & jQuery)
+## 🧑‍💻 Team Member 2 (Sumit): Frontend Interactivity & DOM Manipulation (JavaScript & jQuery)
 **Focus:** Client-side logic, API integration, and dynamic rendering.
-*   **Dynamic UI:** Wrote the client-side JavaScript (`common.js`, `dashboard.js`, `subject.js`) to dynamically manipulate the DOM and update the UI without reloading the page.
-*   **API Integration:** Handled all `fetch()` and AJAX requests to communicate with the backend, fetching JSON data and rendering it dynamically into HTML tables and lists.
-*   **Client-Side Validation:** Implemented robust form validation for the registration and login forms to ensure correct data is sent to the server.
-*   **User Feedback:** Programmed the interactive elements like Toast notifications, modal popups, and the live progress bar for file uploads.
+*   **Dynamic UI & Explorer:** Wrote the client-side JavaScript (`common.js`, `dashboard.js`, `subject.js`, `year.js`) to dynamically manipulate the DOM and update the UI without full-page reloads.
+*   **API & AJAX Integration:** Handled all `fetch()` and `XMLHttpRequest` calls to communicate with Express REST endpoints, receiving JSON and dynamically generating DOM trees.
+*   **Client-Side Validation:** Built robust regex and real-time form validation (`auth.js`) for login, student registration (10-digit PRN validation), and faculty registration.
+*   **User Feedback & Upload Tracker:** Programmed toast notification banners, confirmation modals, search filter debounce, and the live upload progress bar via `XMLHttpRequest.upload.onprogress`.
 
-## 🧑‍💻 Team Member 3: Backend Logic, Routing & Authentication (Node.js & Express.js)
+## 🧑‍💻 Team Member 3 (Krushit): Backend Logic, Routing & Authentication (Node.js & Express.js)
 **Focus:** Server setup, API endpoints, and user security.
-*   **Server Setup:** Configured the `server.js` file using Express.js to serve static files and handle incoming HTTP requests.
-*   **API Routing:** Designed and developed the RESTful API routes (`routes/auth.js`, `routes/browse.js`) for data retrieval and user actions.
-*   **Authentication & Security:** Implemented user login and registration logic, utilizing `express-session` for session tracking and `bcryptjs` for secure password hashing.
-*   **Role-Based Access Control:** Wrote the custom middleware (`middleware/auth.js`) to ensure students cannot access faculty privileges, enforcing strict security on the server side.
+*   **Server Architecture:** Configured `server.js` using Express.js to serve static assets, parse JSON payloads, and manage central error handling.
+*   **API Routing:** Designed and developed modular RESTful API route modules (`routes/auth.js`, `routes/browse.js`) for authentication, academic browsing, and search queries.
+*   **Authentication & Security:** Implemented session tracking with `express-session`, password hashing via `bcryptjs` (salt rounds: 10), and flexible login by either email or 10-digit PRN.
+*   **Role-Based Access Control (RBAC):** Built server-side middleware (`middleware/auth.js`) with `isLoggedIn`, `isFaculty`, and `canWriteHere` to enforce security strictly on the backend (401 Unauthorized / 403 Forbidden).
 
-## 🧑‍💻 Team Member 4: Data Management & File Processing (JSON DB & Multer)
+## 🧑‍💻 Team Member 4 (Aryan): Data Management & File Processing (JSON DB & Multer)
 **Focus:** Data persistence, file upload handling, and system logic.
-*   **Custom JSON Database:** Engineered the `db.js` module to use plain JSON files (`users.json`, `subjects.json`, `items.json`) for data storage, bypassing the need for an external SQL database while maintaining relationships.
-*   **File Upload System:** Implemented backend file uploading using the `multer` package (`routes/manage.js`), including complex logic to handle multiple files, check file types, and validate sizes.
-*   **Core System Logic:** Built the algorithms for the file explorer (e.g., generating breadcrumbs, nested folder structures, and recursive deletion of folders/subjects).
-*   **Seed Data:** Developed the `seed.js` script to automatically generate demo users, folders, and files for project presentation and testing.
+*   **Custom JSON Database:** Engineered the `db.js` storage layer simulating database tables (`users.json`, `subjects.json`, `items.json`) via Node.js `fs` module with foreign key relationships (`parentId`, `subjectId`).
+*   **File Upload Pipeline:** Built multi-file upload processing using `multer` (`routes/manage.js`) with disk storage sanitization, MIME/extension whitelisting, and a 25MB file size limit.
+*   **Cascading Deletion & Breadcrumbs:** Implemented the recursive deletion algorithm (`getDescendants()`) that removes nested folders/files from both JSON and disk storage simultaneously, along with ancestor breadcrumb resolvers.
+*   **Automated Promotion & Seed Data:** Created the academic year calculation algorithm (`getStudyYear()`) that auto-promotes students every July, plus `seed.js` for one-command test data generation.
 
 ---
 
 ### 📝 Summary for Evaluation
 By dividing the project into these four distinct pillars—**Structure (HTML/CSS), Interactivity (Client JS), Server Logic (Express), and Data/Files (Node fs/Multer)**—our team successfully covered all critical learning outcomes of the Basics of Web Programming syllabus while delivering a fully functional, production-ready application.
+

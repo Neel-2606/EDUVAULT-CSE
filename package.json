@@ -1,0 +1,12 @@
+{
+  "name": "eduvault-cse",
+  "version": "1.0.0",
+  "description": "Academic Resource Management System - Department of Computer Science & Engineering, MSU Baroda",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node cse-resourcehub/seed.js"
+  },
+  "author": "Neel, Sumit, Krushit, Aryan",
+  "license": "ISC"
+}
