@@ -11,7 +11,7 @@ This document outlines the division of work among our **4-person team** for the 
 | **Member 1** | UI/UX & Frontend Architecture (HTML5 & CSS3) | **Neel** |
 | **Member 2** | Frontend Interactivity & DOM (JavaScript & jQuery) | **Sumit** |
 | **Member 3** | Backend Logic, Routing & Authentication (Node.js & Express) | **Krushit** |
-| **Member 4** | Data Management & File Processing (JSON DB & Multer) | **Aryan** |
+| **Member 4** | Data Management & File Processing (JSON DB, Multer & Supabase) | **Aryan** |
 
 ---
 
@@ -38,15 +38,14 @@ This document outlines the division of work among our **4-person team** for the 
 *   **Authentication & Security:** Implemented session tracking with `express-session`, password hashing via `bcryptjs` (salt rounds: 10), and flexible login by either email or 10-digit PRN.
 *   **Role-Based Access Control (RBAC):** Built server-side middleware (`middleware/auth.js`) with `isLoggedIn`, `isFaculty`, and `canWriteHere` to enforce security strictly on the backend (401 Unauthorized / 403 Forbidden).
 
-## 🧑‍💻 Team Member 4 (Aryan): Data Management & File Processing (JSON DB & Multer)
+## 🧑‍💻 Team Member 4 (Aryan): Data Management & File Processing (JSON DB, Multer & Supabase)
 **Focus:** Data persistence, file upload handling, and system logic.
-*   **Custom JSON Database:** Engineered the `db.js` storage layer simulating database tables (`users.json`, `subjects.json`, `items.json`) via Node.js `fs` module with foreign key relationships (`parentId`, `subjectId`).
+*   **Custom JSON & Cloud Database:** Engineered the `db.js` storage layer simulating database tables (`users.json`, `subjects.json`, `items.json`) via Node.js `fs` module, upgraded with Supabase PostgreSQL cloud synchronization.
 *   **File Upload Pipeline:** Built multi-file upload processing using `multer` (`routes/manage.js`) with disk storage sanitization, MIME/extension whitelisting, and a 25MB file size limit.
 *   **Cascading Deletion & Breadcrumbs:** Implemented the recursive deletion algorithm (`getDescendants()`) that removes nested folders/files from both JSON and disk storage simultaneously, along with ancestor breadcrumb resolvers.
-*   **Automated Promotion & Seed Data:** Created the academic year calculation algorithm (`getStudyYear()`) that auto-promotes students every July, plus `seed.js` for one-command test data generation.
+*   **Automated Promotion & Seed Data:** Created the academic year calculation algorithm (`getStudyYear()`) that auto-promotes students every July, plus `seed.js` and `seed-supabase.js` for one-command test data generation.
 
 ---
 
 ### 📝 Summary for Evaluation
 By dividing the project into these four distinct pillars—**Structure (HTML/CSS), Interactivity (Client JS), Server Logic (Express), and Data/Files (Node fs/Multer)**—our team successfully covered all critical learning outcomes of the Basics of Web Programming syllabus while delivering a fully functional, production-ready application.
-

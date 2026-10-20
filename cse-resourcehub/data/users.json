@@ -4,48 +4,76 @@
     "role": "faculty",
     "name": "Dr. A. Shah",
     "email": "faculty@msu.ac.in",
-    "passwordHash": "$2a$10$9cVFinSJ264r3FMeK9tPn.tb6xoHe0rOy3j2oQQtaIhF59kukIxaS",
-    "createdAt": "2026-10-12T21:59:41.277Z"
+    "prn": null,
+    "admissionYear": null,
+    "canUploadPYQ": false,
+    "passwordHash": "$2a$10$qH.i8fivMi3nCoUKO9Oz3.RkiCf3jI7.5qVTrTfsf9Vypr9Nqs1Ty",
+    "createdAt": "2026-09-22T02:01:52.331+00:00"
   },
   {
     "id": "mv6dvfpbms2w",
     "role": "faculty",
     "name": "Prof. R. Mehta",
     "email": "faculty2@msu.ac.in",
-    "passwordHash": "$2a$10$VgODRwJWDuYoqeVLEWKNiuidKAkNpaQHAbADzw8hJ/w5Y0wCUZk3i",
-    "createdAt": "2026-10-12T22:06:41.339Z"
+    "prn": null,
+    "admissionYear": null,
+    "canUploadPYQ": false,
+    "passwordHash": "$2a$10$nzsm0AQDa2xgGtA3lmnGTeLrKobbep0h3xE/M8yYBW8hbt7sj8Gwy",
+    "createdAt": "2026-09-22T02:08:52.413+00:00"
   },
   {
     "id": "mv6dvfqzq6wt",
     "role": "student",
     "name": "Riya Patel",
-    "prn": "8026000101",
     "email": "fresher@msu.ac.in",
+    "prn": "8026000101",
     "admissionYear": 2026,
     "canUploadPYQ": false,
-    "passwordHash": "$2a$10$ZkHsVLGvaNde8bn5EPICr.boItwMcIZW0wwd7IGXfgl2BrLssbZ8C",
-    "createdAt": "2026-10-12T22:13:41.397Z"
+    "passwordHash": "$2a$10$okHk1fFUR5FnYNx5sLhoO.BDIlL0lD/csTd2U71dtoxnN1cIgMMIi",
+    "createdAt": "2026-09-22T02:15:52.499+00:00"
   },
   {
     "id": "mv6dvfslj2xc",
     "role": "student",
     "name": "Aarav Desai",
-    "prn": "8025000215",
     "email": "student@msu.ac.in",
+    "prn": "8025000215",
     "admissionYear": 2025,
     "canUploadPYQ": false,
-    "passwordHash": "$2a$10$Bt0JEhhSQFdK.Iyvq4zUhee.i9f9XjlmT2lJu7Kj8i5VwgCXeqd/W",
-    "createdAt": "2026-10-12T22:20:41.460Z"
+    "passwordHash": "$2a$10$gMBnTasCpGBjJyjzxwfImuf5A.5O0GnGm5f98B3Qpy5MPvjwXCOFC",
+    "createdAt": "2026-09-22T02:22:52.579+00:00"
   },
   {
     "id": "mv6dvfuc4vs6",
     "role": "student",
     "name": "Karan Joshi",
-    "prn": "8023000342",
     "email": "senior@msu.ac.in",
+    "prn": "8023000342",
     "admissionYear": 2023,
     "canUploadPYQ": true,
-    "passwordHash": "$2a$10$ZuGGQg3FOfE10os4KjzeweukVW3aj7NTIE93GKudAbF9ATLrhQ7Bq",
-    "createdAt": "2026-10-12T22:27:41.518Z"
+    "passwordHash": "$2a$10$exHfOhTnsQ6VXidEa.XSpepA0Grp/ZKM2o4.F/WY06vQsH2viQjKe",
+    "createdAt": "2026-09-22T02:29:52.661+00:00"
+  },
+  {
+    "id": "mvgayyxakzyb",
+    "role": "student",
+    "name": "Aryan Buha",
+    "email": "aryanbuha56@gmail.com",
+    "prn": "8024056565",
+    "admissionYear": 2024,
+    "canUploadPYQ": false,
+    "passwordHash": "$2a$10$BiWF7FFe1j1xiKDnh1WW8Oyme/e8LqdJtmeEcvYzX0OxVgg4H90xS",
+    "createdAt": "2026-10-20T06:29:09.07+00:00"
+  },
+  {
+    "id": "mvgbfru21r0s",
+    "role": "student",
+    "name": "Aryan Buha",
+    "email": "aryan.buha89@gmail.com",
+    "prn": "8024056566",
+    "admissionYear": 2024,
+    "canUploadPYQ": false,
+    "passwordHash": "$2a$10$Fj7azVGGg/lE8Mv.J8/Hc./evD9jmHjOjMyQCBtUORVam1EZeB5xK",
+    "createdAt": "2026-10-20T06:42:13.034+00:00"
   }
 ]
