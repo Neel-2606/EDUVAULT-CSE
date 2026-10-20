@@ -1,24 +1,31 @@
-# Environment variables (credentials and secrets)
+# Dependencies
+node_modules/
+*/node_modules/
+cse-resourcehub/node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables & secrets
 .env
+.env.*
 .env.local
 .env.*.local
 *.env
 cse-resourcehub/.env
 
-# Dependencies
-node_modules/
-cse-resourcehub/node_modules/
-
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-*.log
-
 # Uploaded files on disk (keep folder structure with .gitkeep)
 cse-resourcehub/uploads/*
 !cse-resourcehub/uploads/.gitkeep
 
-# Operating System Files
+# OS generated files
 .DS_Store
 Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/

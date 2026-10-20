@@ -9,7 +9,7 @@
     "seed": "node seed.js",
     "seed:supabase": "node seed-supabase.js"
   },
-  "author": "Neel Prajapati",
+  "author": "Neel, Sumit, Krushit, Aryan",
   "license": "ISC",
   "dependencies": {
     "@supabase/supabase-js": "^2.49.1",

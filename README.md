@@ -662,17 +662,35 @@ CREATE TABLE items (
 
 ---
 
+---
+
 ## ⚡ Quick start (summary)
 
+From the project root:
 ```bash
-cd "D:\BWP PROJECT\cse-resourcehub"
+npm install        # first time only
+node server.js     # starts server directly at http://localhost:3000
+```
+
+Or from inside `cse-resourcehub`:
+```bash
+cd cse-resourcehub
 npm install        # first time only
 node seed.js       # first time only (optional demo data; clears existing data)
-node server.js     # every time
+node server.js     # starts server at http://localhost:3000
 ```
 
 Then open **http://localhost:3000** and log in with `faculty@msu.ac.in` / `faculty123`.
 
 ---
 
-Developed by **Neel Prajapati**, Basic Web Programming Lab Project, Department of Computer Science & Engineering, MSU Baroda.
+### 👥 Team Contribution
+Developed as a 4-person collaborative lab project for the **Basics of Web Programming (BWP)** course, Department of Computer Science & Engineering, The Maharaja Sayajirao University of Baroda:
+* **Neel** — UI/UX & Frontend Architecture (HTML5 & CSS3)
+* **Sumit** — Frontend Interactivity & DOM Manipulation (JavaScript & jQuery)
+* **Krushit** — Backend Logic, Routing & Authentication (Node.js & Express.js)
+* **Aryan** — Data Management & File Processing (JSON DB & Multer)
+
+Detailed division of responsibilities is documented in [TEAM_WORK_BREAKDOWN.md](TEAM_WORK_BREAKDOWN.md).
+
+
