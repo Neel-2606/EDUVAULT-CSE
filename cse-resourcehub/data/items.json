@@ -7,8 +7,14 @@
     "section": "material",
     "parentId": null,
     "isRoot": true,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zv9etn4",
-    "createdAt": "2026-09-22T02:43:52.661Z"
+    "createdAt": "2026-09-22T02:43:52.661+00:00"
   },
   {
     "id": "mucma06tp0qp",
@@ -18,8 +24,14 @@
     "section": "pyq",
     "parentId": null,
     "isRoot": true,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zv9etn4",
-    "createdAt": "2026-09-22T02:50:52.661Z"
+    "createdAt": "2026-09-22T02:50:52.661+00:00"
   },
   {
     "id": "mucma06tseu8",
@@ -29,8 +41,14 @@
     "section": "other",
     "parentId": null,
     "isRoot": true,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zv9etn4",
-    "createdAt": "2026-09-22T02:57:52.661Z"
+    "createdAt": "2026-09-22T02:57:52.661+00:00"
   },
   {
     "id": "mucma06tfdfm",
@@ -40,8 +58,14 @@
     "section": "material",
     "parentId": "mucma06tfbpa",
     "isRoot": false,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zv9etn4",
-    "createdAt": "2026-09-22T03:04:52.661Z"
+    "createdAt": "2026-09-22T03:04:52.661+00:00"
   },
   {
     "id": "mucma06tis7w",
@@ -51,8 +75,14 @@
     "section": "material",
     "parentId": "mucma06tfbpa",
     "isRoot": false,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zv9etn4",
-    "createdAt": "2026-09-22T03:11:52.661Z"
+    "createdAt": "2026-09-22T03:11:52.661+00:00"
   },
   {
     "id": "mucma06thuvh",
@@ -62,8 +92,14 @@
     "section": "pyq",
     "parentId": "mucma06tp0qp",
     "isRoot": false,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zv9etn4",
-    "createdAt": "2026-09-22T03:18:52.661Z"
+    "createdAt": "2026-09-22T03:18:52.661+00:00"
   },
   {
     "id": "mucma06trj96",
@@ -73,8 +109,14 @@
     "section": "pyq",
     "parentId": "mucma06tp0qp",
     "isRoot": false,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zv9etn4",
-    "createdAt": "2026-09-22T03:25:52.661Z"
+    "createdAt": "2026-09-22T03:25:52.661+00:00"
   },
   {
     "id": "mucma06ttifs",
@@ -84,53 +126,65 @@
     "section": "other",
     "parentId": "mucma06tseu8",
     "isRoot": false,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zv9etn4",
-    "createdAt": "2026-09-22T03:32:52.661Z"
+    "createdAt": "2026-09-22T03:32:52.661+00:00"
   },
   {
     "id": "mucma06uwvrw",
     "type": "file",
     "name": "Unit 1 - Lecture Notes.txt",
-    "storedName": "1790078092661-fb4nbg.txt",
-    "size": 78,
-    "mime": "text/plain",
     "subjectId": "mucma06t5cuz",
     "section": "material",
     "parentId": "mucma06tfdfm",
+    "isRoot": false,
+    "storedName": "1790078092661-fb4nbg.txt",
+    "size": 78,
+    "mime": "text/plain",
     "uploadedBy": "mucm9zv9etn4",
     "uploaderName": "Dr. A. Shah",
     "uploaderRole": "faculty",
-    "createdAt": "2026-09-22T03:46:52.662Z"
+    "createdBy": null,
+    "createdAt": "2026-09-22T03:46:52.662+00:00"
   },
   {
     "id": "mucma06u6ob1",
     "type": "file",
     "name": "CSE1101 End Sem 2025.txt",
-    "storedName": "1790078092662-54mxex.txt",
-    "size": 112,
-    "mime": "text/plain",
     "subjectId": "mucma06t5cuz",
     "section": "pyq",
     "parentId": "mucma06trj96",
+    "isRoot": false,
+    "storedName": "1790078092662-54mxex.txt",
+    "size": 112,
+    "mime": "text/plain",
     "uploadedBy": "mucma04jm3nq",
     "uploaderName": "Karan Joshi",
     "uploaderRole": "student",
-    "createdAt": "2026-09-22T03:53:52.662Z"
+    "createdBy": null,
+    "createdAt": "2026-09-22T03:53:52.662+00:00"
   },
   {
     "id": "mucma06u0rp1",
     "type": "file",
     "name": "Internal Test 1 - Marks.txt",
-    "storedName": "1790078092662-2bfms2.txt",
-    "size": 41,
-    "mime": "text/plain",
     "subjectId": "mucma06t5cuz",
     "section": "other",
     "parentId": "mucma06ttifs",
+    "isRoot": false,
+    "storedName": "1790078092662-2bfms2.txt",
+    "size": 41,
+    "mime": "text/plain",
     "uploadedBy": "mucm9zv9etn4",
     "uploaderName": "Dr. A. Shah",
     "uploaderRole": "faculty",
-    "createdAt": "2026-09-22T04:00:52.662Z"
+    "createdBy": null,
+    "createdAt": "2026-09-22T04:00:52.662+00:00"
   },
   {
     "id": "mucma06uhw0n",
@@ -140,8 +194,14 @@
     "section": "material",
     "parentId": null,
     "isRoot": true,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zv9etn4",
-    "createdAt": "2026-09-22T04:14:52.662Z"
+    "createdAt": "2026-09-22T04:14:52.662+00:00"
   },
   {
     "id": "mucma06uq4t5",
@@ -151,8 +211,14 @@
     "section": "pyq",
     "parentId": null,
     "isRoot": true,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zv9etn4",
-    "createdAt": "2026-09-22T04:21:52.662Z"
+    "createdAt": "2026-09-22T04:21:52.662+00:00"
   },
   {
     "id": "mucma06uc1dp",
@@ -162,8 +228,14 @@
     "section": "other",
     "parentId": null,
     "isRoot": true,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zv9etn4",
-    "createdAt": "2026-09-22T04:28:52.662Z"
+    "createdAt": "2026-09-22T04:28:52.662+00:00"
   },
   {
     "id": "mucma06u60tx",
@@ -173,8 +245,14 @@
     "section": "material",
     "parentId": "mucma06uhw0n",
     "isRoot": false,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zv9etn4",
-    "createdAt": "2026-09-22T04:35:52.662Z"
+    "createdAt": "2026-09-22T04:35:52.662+00:00"
   },
   {
     "id": "mucma06u10c3",
@@ -184,8 +262,14 @@
     "section": "material",
     "parentId": "mucma06uhw0n",
     "isRoot": false,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zv9etn4",
-    "createdAt": "2026-09-22T04:42:52.662Z"
+    "createdAt": "2026-09-22T04:42:52.662+00:00"
   },
   {
     "id": "mucma06u2xl0",
@@ -195,8 +279,14 @@
     "section": "pyq",
     "parentId": "mucma06uq4t5",
     "isRoot": false,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zv9etn4",
-    "createdAt": "2026-09-22T04:49:52.662Z"
+    "createdAt": "2026-09-22T04:49:52.662+00:00"
   },
   {
     "id": "mucma06u3vwt",
@@ -206,8 +296,14 @@
     "section": "pyq",
     "parentId": "mucma06uq4t5",
     "isRoot": false,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zv9etn4",
-    "createdAt": "2026-09-22T04:56:52.662Z"
+    "createdAt": "2026-09-22T04:56:52.662+00:00"
   },
   {
     "id": "mucma06ub5zo",
@@ -217,68 +313,82 @@
     "section": "other",
     "parentId": "mucma06uc1dp",
     "isRoot": false,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zv9etn4",
-    "createdAt": "2026-09-22T05:03:52.662Z"
+    "createdAt": "2026-09-22T05:03:52.662+00:00"
   },
   {
     "id": "mucma06vnqks",
     "type": "file",
     "name": "Basic Web Programming - Syllabus.txt",
-    "storedName": "1790078092662-bczcf8.txt",
-    "size": 108,
-    "mime": "text/plain",
     "subjectId": "mucma06uqpil",
     "section": "material",
     "parentId": "mucma06uhw0n",
+    "isRoot": false,
+    "storedName": "1790078092662-bczcf8.txt",
+    "size": 108,
+    "mime": "text/plain",
     "uploadedBy": "mucm9zv9etn4",
     "uploaderName": "Dr. A. Shah",
     "uploaderRole": "faculty",
-    "createdAt": "2026-09-22T05:10:52.663Z"
+    "createdBy": null,
+    "createdAt": "2026-09-22T05:10:52.663+00:00"
   },
   {
     "id": "mucma06vctmz",
     "type": "file",
     "name": "Unit 1 - Lecture Notes.txt",
-    "storedName": "1790078092663-0crfum.txt",
-    "size": 83,
-    "mime": "text/plain",
     "subjectId": "mucma06uqpil",
     "section": "material",
     "parentId": "mucma06u60tx",
+    "isRoot": false,
+    "storedName": "1790078092663-0crfum.txt",
+    "size": 83,
+    "mime": "text/plain",
     "uploadedBy": "mucm9zv9etn4",
     "uploaderName": "Dr. A. Shah",
     "uploaderRole": "faculty",
-    "createdAt": "2026-09-22T05:17:52.663Z"
+    "createdBy": null,
+    "createdAt": "2026-09-22T05:17:52.663+00:00"
   },
   {
     "id": "mucma06v4auo",
     "type": "file",
     "name": "CSE2301 End Sem 2025.txt",
-    "storedName": "1790078092663-j6yy6b.txt",
-    "size": 117,
-    "mime": "text/plain",
     "subjectId": "mucma06uqpil",
     "section": "pyq",
     "parentId": "mucma06u3vwt",
+    "isRoot": false,
+    "storedName": "1790078092663-j6yy6b.txt",
+    "size": 117,
+    "mime": "text/plain",
     "uploadedBy": "mucma04jm3nq",
     "uploaderName": "Karan Joshi",
     "uploaderRole": "student",
-    "createdAt": "2026-09-22T05:24:52.663Z"
+    "createdBy": null,
+    "createdAt": "2026-09-22T05:24:52.663+00:00"
   },
   {
     "id": "mucma06w6b0e",
     "type": "file",
     "name": "Internal Test 1 - Marks.txt",
-    "storedName": "1790078092663-exngaq.txt",
-    "size": 41,
-    "mime": "text/plain",
     "subjectId": "mucma06uqpil",
     "section": "other",
     "parentId": "mucma06ub5zo",
+    "isRoot": false,
+    "storedName": "1790078092663-exngaq.txt",
+    "size": 41,
+    "mime": "text/plain",
     "uploadedBy": "mucm9zv9etn4",
     "uploaderName": "Dr. A. Shah",
     "uploaderRole": "faculty",
-    "createdAt": "2026-09-22T05:31:52.664Z"
+    "createdBy": null,
+    "createdAt": "2026-09-22T05:31:52.664+00:00"
   },
   {
     "id": "mucma06wc0de",
@@ -288,8 +398,14 @@
     "section": "material",
     "parentId": null,
     "isRoot": true,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zxobidi",
-    "createdAt": "2026-09-22T05:45:52.664Z"
+    "createdAt": "2026-09-22T05:45:52.664+00:00"
   },
   {
     "id": "mucma06wol3n",
@@ -299,8 +415,14 @@
     "section": "pyq",
     "parentId": null,
     "isRoot": true,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zxobidi",
-    "createdAt": "2026-09-22T05:52:52.664Z"
+    "createdAt": "2026-09-22T05:52:52.664+00:00"
   },
   {
     "id": "mucma06wpelw",
@@ -310,8 +432,14 @@
     "section": "other",
     "parentId": null,
     "isRoot": true,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zxobidi",
-    "createdAt": "2026-09-22T05:59:52.664Z"
+    "createdAt": "2026-09-22T05:59:52.664+00:00"
   },
   {
     "id": "mucma06wio1g",
@@ -321,8 +449,14 @@
     "section": "material",
     "parentId": "mucma06wc0de",
     "isRoot": false,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zxobidi",
-    "createdAt": "2026-09-22T06:06:52.664Z"
+    "createdAt": "2026-09-22T06:06:52.664+00:00"
   },
   {
     "id": "mucma06w0i8l",
@@ -332,8 +466,14 @@
     "section": "material",
     "parentId": "mucma06wc0de",
     "isRoot": false,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zxobidi",
-    "createdAt": "2026-09-22T06:13:52.664Z"
+    "createdAt": "2026-09-22T06:13:52.664+00:00"
   },
   {
     "id": "mucma06wmt3p",
@@ -343,8 +483,14 @@
     "section": "pyq",
     "parentId": "mucma06wol3n",
     "isRoot": false,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zxobidi",
-    "createdAt": "2026-09-22T06:20:52.664Z"
+    "createdAt": "2026-09-22T06:20:52.664+00:00"
   },
   {
     "id": "mucma06w87k4",
@@ -354,8 +500,14 @@
     "section": "pyq",
     "parentId": "mucma06wol3n",
     "isRoot": false,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zxobidi",
-    "createdAt": "2026-09-22T06:27:52.664Z"
+    "createdAt": "2026-09-22T06:27:52.664+00:00"
   },
   {
     "id": "mucma06w8z18",
@@ -365,68 +517,82 @@
     "section": "other",
     "parentId": "mucma06wpelw",
     "isRoot": false,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zxobidi",
-    "createdAt": "2026-09-22T06:34:52.664Z"
+    "createdAt": "2026-09-22T06:34:52.664+00:00"
   },
   {
     "id": "mucma06w9mth",
     "type": "file",
     "name": "Data Structures - Syllabus.txt",
-    "storedName": "1790078092664-8pscwz.txt",
-    "size": 102,
-    "mime": "text/plain",
     "subjectId": "mucma06wiy9o",
     "section": "material",
     "parentId": "mucma06wc0de",
+    "isRoot": false,
+    "storedName": "1790078092664-8pscwz.txt",
+    "size": 102,
+    "mime": "text/plain",
     "uploadedBy": "mucm9zxobidi",
     "uploaderName": "Prof. R. Mehta",
     "uploaderRole": "faculty",
-    "createdAt": "2026-09-22T06:41:52.664Z"
+    "createdBy": null,
+    "createdAt": "2026-09-22T06:41:52.664+00:00"
   },
   {
     "id": "mucma06wdh3b",
     "type": "file",
     "name": "Unit 1 - Lecture Notes.txt",
-    "storedName": "1790078092664-za2jef.txt",
-    "size": 77,
-    "mime": "text/plain",
     "subjectId": "mucma06wiy9o",
     "section": "material",
     "parentId": "mucma06wio1g",
+    "isRoot": false,
+    "storedName": "1790078092664-za2jef.txt",
+    "size": 77,
+    "mime": "text/plain",
     "uploadedBy": "mucm9zxobidi",
     "uploaderName": "Prof. R. Mehta",
     "uploaderRole": "faculty",
-    "createdAt": "2026-09-22T06:48:52.664Z"
+    "createdBy": null,
+    "createdAt": "2026-09-22T06:48:52.664+00:00"
   },
   {
     "id": "mucma06xo09t",
     "type": "file",
     "name": "CSE2302 End Sem 2025.txt",
-    "storedName": "1790078092664-a5361m.txt",
-    "size": 111,
-    "mime": "text/plain",
     "subjectId": "mucma06wiy9o",
     "section": "pyq",
     "parentId": "mucma06w87k4",
+    "isRoot": false,
+    "storedName": "1790078092664-a5361m.txt",
+    "size": 111,
+    "mime": "text/plain",
     "uploadedBy": "mucma04jm3nq",
     "uploaderName": "Karan Joshi",
     "uploaderRole": "student",
-    "createdAt": "2026-09-22T06:55:52.665Z"
+    "createdBy": null,
+    "createdAt": "2026-09-22T06:55:52.665+00:00"
   },
   {
     "id": "mucma06x50f3",
     "type": "file",
     "name": "Internal Test 1 - Marks.txt",
-    "storedName": "1790078092665-0eww6a.txt",
-    "size": 41,
-    "mime": "text/plain",
     "subjectId": "mucma06wiy9o",
     "section": "other",
     "parentId": "mucma06w8z18",
+    "isRoot": false,
+    "storedName": "1790078092665-0eww6a.txt",
+    "size": 41,
+    "mime": "text/plain",
     "uploadedBy": "mucm9zxobidi",
     "uploaderName": "Prof. R. Mehta",
     "uploaderRole": "faculty",
-    "createdAt": "2026-09-22T07:02:52.665Z"
+    "createdBy": null,
+    "createdAt": "2026-09-22T07:02:52.665+00:00"
   },
   {
     "id": "mucma06xgwyc",
@@ -436,8 +602,14 @@
     "section": "material",
     "parentId": null,
     "isRoot": true,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zxobidi",
-    "createdAt": "2026-09-22T07:16:52.665Z"
+    "createdAt": "2026-09-22T07:16:52.665+00:00"
   },
   {
     "id": "mucma06xlo46",
@@ -447,8 +619,14 @@
     "section": "pyq",
     "parentId": null,
     "isRoot": true,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zxobidi",
-    "createdAt": "2026-09-22T07:23:52.665Z"
+    "createdAt": "2026-09-22T07:23:52.665+00:00"
   },
   {
     "id": "mucma06x7d42",
@@ -458,8 +636,14 @@
     "section": "other",
     "parentId": null,
     "isRoot": true,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zxobidi",
-    "createdAt": "2026-09-22T07:30:52.665Z"
+    "createdAt": "2026-09-22T07:30:52.665+00:00"
   },
   {
     "id": "mucma06xio90",
@@ -469,8 +653,14 @@
     "section": "material",
     "parentId": "mucma06xgwyc",
     "isRoot": false,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zxobidi",
-    "createdAt": "2026-09-22T07:37:52.665Z"
+    "createdAt": "2026-09-22T07:37:52.665+00:00"
   },
   {
     "id": "mucma06xv5ai",
@@ -480,8 +670,14 @@
     "section": "material",
     "parentId": "mucma06xgwyc",
     "isRoot": false,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zxobidi",
-    "createdAt": "2026-09-22T07:44:52.665Z"
+    "createdAt": "2026-09-22T07:44:52.665+00:00"
   },
   {
     "id": "mucma06xk38u",
@@ -491,8 +687,14 @@
     "section": "pyq",
     "parentId": "mucma06xlo46",
     "isRoot": false,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zxobidi",
-    "createdAt": "2026-09-22T07:51:52.665Z"
+    "createdAt": "2026-09-22T07:51:52.665+00:00"
   },
   {
     "id": "mucma06xq7re",
@@ -502,8 +704,14 @@
     "section": "pyq",
     "parentId": "mucma06xlo46",
     "isRoot": false,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zxobidi",
-    "createdAt": "2026-09-22T07:58:52.665Z"
+    "createdAt": "2026-09-22T07:58:52.665+00:00"
   },
   {
     "id": "mucma06xmuzd",
@@ -513,68 +721,82 @@
     "section": "other",
     "parentId": "mucma06x7d42",
     "isRoot": false,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zxobidi",
-    "createdAt": "2026-09-22T08:05:52.665Z"
+    "createdAt": "2026-09-22T08:05:52.665+00:00"
   },
   {
     "id": "mucma06x1ldf",
     "type": "file",
     "name": "Operating Systems - Syllabus.txt",
-    "storedName": "1790078092665-eaftc2.txt",
-    "size": 104,
-    "mime": "text/plain",
     "subjectId": "mucma06xw54t",
     "section": "material",
     "parentId": "mucma06xgwyc",
+    "isRoot": false,
+    "storedName": "1790078092665-eaftc2.txt",
+    "size": 104,
+    "mime": "text/plain",
     "uploadedBy": "mucm9zxobidi",
     "uploaderName": "Prof. R. Mehta",
     "uploaderRole": "faculty",
-    "createdAt": "2026-09-22T08:12:52.665Z"
+    "createdBy": null,
+    "createdAt": "2026-09-22T08:12:52.665+00:00"
   },
   {
     "id": "mucma06xe43u",
     "type": "file",
     "name": "Unit 1 - Lecture Notes.txt",
-    "storedName": "1790078092665-xqrjcv.txt",
-    "size": 79,
-    "mime": "text/plain",
     "subjectId": "mucma06xw54t",
     "section": "material",
     "parentId": "mucma06xio90",
+    "isRoot": false,
+    "storedName": "1790078092665-xqrjcv.txt",
+    "size": 79,
+    "mime": "text/plain",
     "uploadedBy": "mucm9zxobidi",
     "uploaderName": "Prof. R. Mehta",
     "uploaderRole": "faculty",
-    "createdAt": "2026-09-22T08:19:52.665Z"
+    "createdBy": null,
+    "createdAt": "2026-09-22T08:19:52.665+00:00"
   },
   {
     "id": "mucma06ym0dt",
     "type": "file",
     "name": "CSE3501 End Sem 2025.txt",
-    "storedName": "1790078092666-05jdlq.txt",
-    "size": 113,
-    "mime": "text/plain",
     "subjectId": "mucma06xw54t",
     "section": "pyq",
     "parentId": "mucma06xq7re",
+    "isRoot": false,
+    "storedName": "1790078092666-05jdlq.txt",
+    "size": 113,
+    "mime": "text/plain",
     "uploadedBy": "mucma04jm3nq",
     "uploaderName": "Karan Joshi",
     "uploaderRole": "student",
-    "createdAt": "2026-09-22T08:26:52.666Z"
+    "createdBy": null,
+    "createdAt": "2026-09-22T08:26:52.666+00:00"
   },
   {
     "id": "mucma06yaoah",
     "type": "file",
     "name": "Internal Test 1 - Marks.txt",
-    "storedName": "1790078092666-n84h8b.txt",
-    "size": 41,
-    "mime": "text/plain",
     "subjectId": "mucma06xw54t",
     "section": "other",
     "parentId": "mucma06xmuzd",
+    "isRoot": false,
+    "storedName": "1790078092666-n84h8b.txt",
+    "size": 41,
+    "mime": "text/plain",
     "uploadedBy": "mucm9zxobidi",
     "uploaderName": "Prof. R. Mehta",
     "uploaderRole": "faculty",
-    "createdAt": "2026-09-22T08:33:52.666Z"
+    "createdBy": null,
+    "createdAt": "2026-09-22T08:33:52.666+00:00"
   },
   {
     "id": "mucmed6cghjg",
@@ -584,8 +806,14 @@
     "section": "other",
     "parentId": "mucma06tseu8",
     "isRoot": false,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zv9etn4",
-    "createdAt": "2026-09-22T11:58:16.116Z"
+    "createdAt": "2026-09-22T11:58:16.116+00:00"
   },
   {
     "id": "mucmei3ntwoh",
@@ -595,7 +823,13 @@
     "section": "other",
     "parentId": "mucmed6cghjg",
     "isRoot": false,
+    "storedName": null,
+    "size": 0,
+    "mime": null,
+    "uploadedBy": null,
+    "uploaderName": null,
+    "uploaderRole": null,
     "createdBy": "mucm9zv9etn4",
-    "createdAt": "2026-09-22T11:58:22.499Z"
+    "createdAt": "2026-09-22T11:58:22.499+00:00"
   }
 ]
