@@ -1,207 +1,149 @@
-// auth.js
-// Logic for the login page, the register page and the profile page.
-// Each page is detected by the form it contains.
+// auth.js - Login, Registration and Profile password change
 
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-/* ---------- Inline form errors ---------- */
-
-// Shows a red message under one input
-function showFieldError(selector, message) {
-  $(selector).addClass('input-error').closest('.form-group').find('.field-error').text(message);
+// Helper to show field error under input
+function showErr(selector, msg) {
+  $(selector).addClass('input-error').closest('.form-group').find('.field-error').text(msg);
 }
 
-// Removes all red messages inside a form
-function clearErrors(form) {
+// Clears all form errors
+function clearErr(form) {
   $(form).find('.input-error').removeClass('input-error');
-  $(form).find('.field-error').text('');
-  $(form).find('.form-message').removeClass('error').text('');
+  $(form).find('.field-error, .form-message').text('').removeClass('error');
 }
 
-// Shows a message box at the top of a form (for errors coming from the server)
-function showFormMessage(form, message) {
-  $(form).find('.form-message').addClass('error').text(message);
-}
-
-// Disables the submit button while waiting for the server
-function setBusy(form, busy, text) {
-  const button = $(form).find('button[type="submit"]');
-  if (busy) button.data('text', button.text());
-  button.prop('disabled', busy).text(busy ? text : button.data('text'));
-}
-
-// Same calculation as the server: the academic year starts in July
-function academicStartYear() {
-  const today = new Date();
-  return today.getMonth() >= 6 ? today.getFullYear() : today.getFullYear() - 1;
-}
-
-/* ---------- Login page ---------- */
-
+// ---------------- LOGIN PAGE ----------------
 async function setupLoginPage() {
   const user = await loadPublicLayout();
   if (user) { window.location.href = 'dashboard.html'; return; }
 
-  $('#login-form').on('submit', async function (event) {
-    event.preventDefault();
-    const form = this;
-    clearErrors(form);
+  $('#login-form').on('submit', async function (e) {
+    e.preventDefault();
+    clearErr(this);
     const identifier = $('#login-id').val().trim();
     const password = $('#login-password').val();
 
-    let valid = true;
-    if (!identifier) { showFieldError('#login-id', 'Please enter your email or PRN.'); valid = false; }
-    if (!password) { showFieldError('#login-password', 'Please enter your password.'); valid = false; }
-    if (!valid) return;
+    if (!identifier || !password) {
+      if (!identifier) showErr('#login-id', 'Enter email or PRN.');
+      if (!password) showErr('#login-password', 'Enter password.');
+      return;
+    }
 
-    setBusy(form, true, 'Logging in...');
-    const result = await api('/api/login', 'POST', { identifier: identifier, password: password });
-    if (result.success) {
+    const res = await api('/api/login', 'POST', { identifier, password });
+    if (res.success) {
       window.location.href = 'dashboard.html';
     } else {
-      setBusy(form, false);
-      showFormMessage(form, result.message);
+      $(this).find('.form-message').addClass('error').text(res.message);
     }
   });
 }
 
-/* ---------- Register page ---------- */
-
-// Fills the admission year dropdown with the last 5 batches and shows "you will be Year X"
-function fillAdmissionYears() {
-  const startYear = academicStartYear();
-  for (let year = startYear; year >= startYear - 4; year--) {
-    const studyYear = startYear - year + 1;
-    const label = studyYear > 4 ? year + ' · Alumni' : year + ' · Year ' + studyYear;
-    $('#s-admission').append('<option value="' + year + '">' + label + '</option>');
-  }
-}
-
-// Checks the student form in the browser before sending it. Returns true if all fields are fine.
-function validateStudentForm() {
-  let valid = true;
-  if ($('#s-name').val().trim().length < 2) { showFieldError('#s-name', 'Please enter your full name.'); valid = false; }
-  if (!/^\d{10}$/.test($('#s-prn').val().trim())) { showFieldError('#s-prn', 'PRN must be exactly 10 digits.'); valid = false; }
-  if (!EMAIL_PATTERN.test($('#s-email').val().trim())) { showFieldError('#s-email', 'Please enter a valid email.'); valid = false; }
-  if (!$('#s-admission').val()) { showFieldError('#s-admission', 'Please select your admission year.'); valid = false; }
-  if ($('#s-password').val().length < 6) { showFieldError('#s-password', 'At least 6 characters.'); valid = false; }
-  if ($('#s-confirm').val() !== $('#s-password').val()) { showFieldError('#s-confirm', 'Passwords do not match.'); valid = false; }
-  return valid;
-}
-
-function validateFacultyForm() {
-  let valid = true;
-  if ($('#f-name').val().trim().length < 2) { showFieldError('#f-name', 'Please enter your full name.'); valid = false; }
-  if (!EMAIL_PATTERN.test($('#f-email').val().trim())) { showFieldError('#f-email', 'Please enter a valid email.'); valid = false; }
-  if (!$('#f-code').val().trim()) { showFieldError('#f-code', 'Faculty secret code is required.'); valid = false; }
-  if ($('#f-password').val().length < 6) { showFieldError('#f-password', 'At least 6 characters.'); valid = false; }
-  if ($('#f-confirm').val() !== $('#f-password').val()) { showFieldError('#f-confirm', 'Passwords do not match.'); valid = false; }
-  return valid;
-}
-
-// Sends a registration form to the server
-async function submitRegistration(form, url, data) {
-  setBusy(form, true, 'Creating account...');
-  const result = await api(url, 'POST', data);
-  if (result.success) {
-    window.location.href = 'dashboard.html';
-  } else {
-    setBusy(form, false);
-    showFormMessage(form, result.message);
-  }
-}
-
+// ---------------- REGISTER PAGE ----------------
 async function setupRegisterPage() {
   const user = await loadPublicLayout();
   if (user) { window.location.href = 'dashboard.html'; return; }
-  fillAdmissionYears();
 
-  // Student / Faculty tabs
+  // Populate admission year dropdown (current year and 4 past years)
+  const y = new Date().getFullYear();
+  for (let b = y; b >= y - 4; b--) {
+    const yr = y - b + 1;
+    $('#s-admission').append(`<option value="${b}">${b} · ${yr <= 4 ? 'Year ' + yr : 'Alumni'}</option>`);
+  }
+
+  // Tab switching: Student vs Faculty
   $('.section-tab').on('click', function () {
     $('.section-tab').removeClass('active');
     $(this).addClass('active');
     $('.register-form').addClass('hidden');
     $('#' + $(this).data('form')).removeClass('hidden');
   });
+
   if (getParam('role') === 'faculty') $('.section-tab[data-form="faculty-form"]').click();
 
-  $('#student-form').on('submit', function (event) {
-    event.preventDefault();
-    clearErrors(this);
-    if (!validateStudentForm()) return;
-    submitRegistration(this, '/api/register/student', {
+  // Student registration
+  $('#student-form').on('submit', async function (e) {
+    e.preventDefault();
+    clearErr(this);
+    const data = {
       name: $('#s-name').val().trim(),
       prn: $('#s-prn').val().trim(),
       email: $('#s-email').val().trim(),
       admissionYear: $('#s-admission').val(),
       password: $('#s-password').val()
-    });
+    };
+
+    if (!data.name) return showErr('#s-name', 'Name is required.');
+    if (!/^\d{10}$/.test(data.prn)) return showErr('#s-prn', 'PRN must be 10 digits.');
+    if (!data.email.includes('@')) return showErr('#s-email', 'Enter a valid email.');
+    if (data.password.length < 6) return showErr('#s-password', 'Min 6 characters required.');
+    if (data.password !== $('#s-confirm').val()) return showErr('#s-confirm', 'Passwords do not match.');
+
+    const res = await api('/api/register/student', 'POST', data);
+    if (res.success) window.location.href = 'dashboard.html';
+    else $(this).find('.form-message').addClass('error').text(res.message);
   });
 
-  $('#faculty-form').on('submit', function (event) {
-    event.preventDefault();
-    clearErrors(this);
-    if (!validateFacultyForm()) return;
-    submitRegistration(this, '/api/register/faculty', {
+  // Faculty registration
+  $('#faculty-form').on('submit', async function (e) {
+    e.preventDefault();
+    clearErr(this);
+    const data = {
       name: $('#f-name').val().trim(),
       email: $('#f-email').val().trim(),
       secretCode: $('#f-code').val().trim(),
       password: $('#f-password').val()
-    });
+    };
+
+    if (!data.name) return showErr('#f-name', 'Name is required.');
+    if (!data.email.includes('@')) return showErr('#f-email', 'Enter a valid email.');
+    if (!data.secretCode) return showErr('#f-code', 'Secret code is required.');
+    if (data.password.length < 6) return showErr('#f-password', 'Min 6 characters required.');
+    if (data.password !== $('#f-confirm').val()) return showErr('#f-confirm', 'Passwords do not match.');
+
+    const res = await api('/api/register/faculty', 'POST', data);
+    if (res.success) window.location.href = 'dashboard.html';
+    else $(this).find('.form-message').addClass('error').text(res.message);
   });
 }
 
-/* ---------- Profile page ---------- */
-
-// Shows the user's details in a small table
-function renderProfile(user) {
-  const rows = [['Name', user.name], ['Role', user.role === 'faculty' ? 'Faculty' : 'Student'], ['Email', user.email]];
-  if (user.role === 'student') {
-    rows.push(['PRN', user.prn]);
-    rows.push(['Batch (Admission Year)', user.admissionYear]);
-    rows.push(['Current Year', studentYearText(user)]);
-    rows.push(['PYQ Upload Access', user.canUploadPYQ ? '✅ Allowed' : '❌ Not allowed']);
-  }
-  rows.push(['Member Since', formatDate(user.createdAt)]);
-
-  const html = rows.map(function (row) {
-    return '<tr><td>' + escapeHTML(row[0]) + '</td><td>' + escapeHTML(row[1]) + '</td></tr>';
-  }).join('');
-  $('#profile-details').html('<table>' + html + '</table>');
-}
-
+// ---------------- PROFILE PAGE ----------------
 async function setupProfilePage() {
   const user = await requireLogin();
   if (!user) return;
-  renderProfile(user);
 
-  $('#password-form').on('submit', async function (event) {
-    event.preventDefault();
-    const form = this;
-    clearErrors(form);
+  const rows = [
+    `<tr><td>Name</td><td>${escapeHTML(user.name)}</td></tr>`,
+    `<tr><td>Role</td><td>${user.role === 'faculty' ? 'Faculty' : 'Student'}</td></tr>`,
+    `<tr><td>Email</td><td>${escapeHTML(user.email)}</td></tr>`
+  ];
+  if (user.role === 'student') {
+    rows.push(`<tr><td>PRN</td><td>${escapeHTML(user.prn)}</td></tr>`);
+    rows.push(`<tr><td>Batch</td><td>${user.admissionYear}</td></tr>`);
+    rows.push(`<tr><td>PYQ Access</td><td>${user.canUploadPYQ ? 'Allowed ✅' : 'Not Allowed ❌'}</td></tr>`);
+  }
+  $('#profile-details').html(`<table>${rows.join('')}</table>`);
+
+  // Password change
+  $('#password-form').on('submit', async function (e) {
+    e.preventDefault();
+    clearErr(this);
     const oldPassword = $('#old-password').val();
     const newPassword = $('#new-password').val();
 
-    let valid = true;
-    if (!oldPassword) { showFieldError('#old-password', 'Enter your current password.'); valid = false; }
-    if (newPassword.length < 6) { showFieldError('#new-password', 'At least 6 characters.'); valid = false; }
-    if ($('#confirm-password').val() !== newPassword) { showFieldError('#confirm-password', 'Passwords do not match.'); valid = false; }
-    if (!valid) return;
+    if (!oldPassword) return showErr('#old-password', 'Enter current password.');
+    if (newPassword.length < 6) return showErr('#new-password', 'Min 6 characters required.');
+    if (newPassword !== $('#confirm-password').val()) return showErr('#confirm-password', 'Passwords do not match.');
 
-    setBusy(form, true, 'Saving...');
-    const result = await api('/api/me/password', 'PUT', { oldPassword: oldPassword, newPassword: newPassword });
-    setBusy(form, false);
-    if (result.success) {
-      form.reset();
-      showToast(result.message);
+    const res = await api('/api/me/password', 'PUT', { oldPassword, newPassword });
+    if (res.success) {
+      this.reset();
+      showToast(res.message);
     } else {
-      showFormMessage(form, result.message);
+      $(this).find('.form-message').addClass('error').text(res.message);
     }
   });
 }
 
-/* ---------- Start the right page ---------- */
-$(function () {
+$(() => {
   if ($('#login-form').length) setupLoginPage();
   if ($('#student-form').length) setupRegisterPage();
   if ($('#password-form').length) setupProfilePage();
