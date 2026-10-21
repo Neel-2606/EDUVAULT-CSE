@@ -181,6 +181,27 @@ INSERT INTO items (id, type, name, subject_id, section, parent_id, is_root, stor
 ('mucma06ym0dt', 'file', 'CSE3501 End Sem 2025.txt', 'mucma06xw54t', 'pyq', 'mucma06xq7re', FALSE, '1790078092666-05jdlq.txt', 113, 'text/plain', 'mucma04jm3nq', 'Karan Joshi', 'student', NULL, '2026-09-22 08:26:52.666+00'),
 ('mucma06yaoah', 'file', 'Internal Test 1 - Marks.txt', 'mucma06xw54t', 'other', 'mucma06xmuzd', FALSE, '1790078092666-n84h8b.txt', 41, 'text/plain', 'mucm9zxobidi', 'Prof. R. Mehta', 'faculty', NULL, '2026-09-22 08:33:52.666+00');
 
+-- 8. STORAGE BUCKET: uploads
+-- Create public storage bucket for uploaded files (PDFs, PPTXs, docs, images)
+INSERT INTO storage.buckets (id, name, public)
+VALUES ('uploads', 'uploads', true)
+ON CONFLICT (id) DO UPDATE SET public = true;
+
+DROP POLICY IF EXISTS "Public Storage Read" ON storage.objects;
+CREATE POLICY "Public Storage Read" ON storage.objects
+FOR SELECT TO anon, authenticated
+USING (bucket_id = 'uploads');
+
+DROP POLICY IF EXISTS "Public Storage Upload" ON storage.objects;
+CREATE POLICY "Public Storage Upload" ON storage.objects
+FOR INSERT TO anon, authenticated
+WITH CHECK (bucket_id = 'uploads');
+
+DROP POLICY IF EXISTS "Public Storage Update" ON storage.objects;
+CREATE POLICY "Public Storage Update" ON storage.objects
+FOR UPDATE TO anon, authenticated
+USING (bucket_id = 'uploads');
+
 -- ==============================================================================
 -- ✅ SUCCESS! Verification Query
 -- ==============================================================================
@@ -189,3 +210,4 @@ UNION ALL
 SELECT 'Subjects count:' AS table_name, count(*) FROM subjects
 UNION ALL
 SELECT 'Items count (folders + files):' AS table_name, count(*) FROM items;
+

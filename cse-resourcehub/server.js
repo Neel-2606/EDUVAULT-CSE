@@ -5,7 +5,7 @@ const path = require('path');
 const config = require('./config');
 const db = require('./db');
 
-// Make sure /data and /uploads exist and Supabase syncs before routes
+// Auto-storage init and Supabase sync
 db.setupStorage();
 
 const app = express();

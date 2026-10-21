@@ -1,6 +1,6 @@
 [
   {
-    "id": "mv6dvfnfyycc",
+    "id": "mucm9zv9etn4",
     "role": "faculty",
     "name": "Dr. A. Shah",
     "email": "faculty@msu.ac.in",
@@ -11,7 +11,7 @@
     "createdAt": "2026-09-22T02:01:52.331+00:00"
   },
   {
-    "id": "mv6dvfpbms2w",
+    "id": "mucm9zxobidi",
     "role": "faculty",
     "name": "Prof. R. Mehta",
     "email": "faculty2@msu.ac.in",
@@ -22,7 +22,7 @@
     "createdAt": "2026-09-22T02:08:52.413+00:00"
   },
   {
-    "id": "mv6dvfqzq6wt",
+    "id": "mucm9zzxhfqp",
     "role": "student",
     "name": "Riya Patel",
     "email": "fresher@msu.ac.in",
@@ -33,7 +33,7 @@
     "createdAt": "2026-09-22T02:15:52.499+00:00"
   },
   {
-    "id": "mv6dvfslj2xc",
+    "id": "mucma02brdm5",
     "role": "student",
     "name": "Aarav Desai",
     "email": "student@msu.ac.in",
@@ -44,7 +44,7 @@
     "createdAt": "2026-09-22T02:22:52.579+00:00"
   },
   {
-    "id": "mv6dvfuc4vs6",
+    "id": "mucma04jm3nq",
     "role": "student",
     "name": "Karan Joshi",
     "email": "senior@msu.ac.in",
@@ -61,7 +61,7 @@
     "email": "aryanbuha56@gmail.com",
     "prn": "8024056565",
     "admissionYear": 2024,
-    "canUploadPYQ": false,
+    "canUploadPYQ": true,
     "passwordHash": "$2a$10$BiWF7FFe1j1xiKDnh1WW8Oyme/e8LqdJtmeEcvYzX0OxVgg4H90xS",
     "createdAt": "2026-10-20T06:29:09.07+00:00"
   },
@@ -72,8 +72,41 @@
     "email": "aryan.buha89@gmail.com",
     "prn": "8024056566",
     "admissionYear": 2024,
-    "canUploadPYQ": false,
+    "canUploadPYQ": true,
     "passwordHash": "$2a$10$Fj7azVGGg/lE8Mv.J8/Hc./evD9jmHjOjMyQCBtUORVam1EZeB5xK",
     "createdAt": "2026-10-20T06:42:13.034+00:00"
+  },
+  {
+    "id": "mvi2tw42n1ej",
+    "role": "student",
+    "name": "Neel Prajapati",
+    "email": "neelprajapati2601@gmail.com",
+    "prn": "8024056612",
+    "admissionYear": 2026,
+    "canUploadPYQ": false,
+    "passwordHash": "$2a$10$Y39B5zcAQkBhCP76kpVnbeBRhTs14w1Jb0CVqUk85bBMAh4IlSaoe",
+    "createdAt": "2026-10-21T12:16:47.57+00:00"
+  },
+  {
+    "id": "mvi34l10saml",
+    "role": "faculty",
+    "name": "Vilas Macchi",
+    "email": "kingcoding75@gmail.com",
+    "prn": null,
+    "admissionYear": null,
+    "canUploadPYQ": false,
+    "passwordHash": "$2a$10$aAF7xDUvVr6dmlvw9JlAw.CzwzhDtRft6.bEuwP.VQFND7sz1rYpy",
+    "createdAt": "2026-10-21T12:25:06.42+00:00"
+  },
+  {
+    "id": "mvi36tgvqm3w",
+    "role": "faculty",
+    "name": "Neel",
+    "email": "ndp26012006@gmail.com",
+    "prn": null,
+    "admissionYear": null,
+    "canUploadPYQ": false,
+    "passwordHash": "$2a$10$ZQNRWYzyYry5ZAfQM5oJieoO8wKXSyl2XCfyh1sikba0k3MW3GUAa",
+    "createdAt": "2026-10-21T12:26:50.671+00:00"
   }
 ]

@@ -265,18 +265,37 @@ router.post('/upload', isLoggedIn, receiveFiles, function (req, res) {
     return sendError(res, status, message);
   }
 
-  files.forEach(function (f) {
-    // Browsers send the name as latin1, this converts it back so names like "नोट्स.pdf" stay correct
-    const originalName = path.basename(Buffer.from(f.originalname, 'latin1').toString('utf8'));
-    items.push({
-      id: db.newId(), type: 'file',
-      name: makeUniqueName(originalName, parent.id, items),
-      storedName: f.filename, size: f.size, mime: f.mimetype,
-      subjectId: parent.subjectId, section: parent.section, parentId: parent.id,
-      uploadedBy: req.user.id, uploaderName: req.user.name, uploaderRole: req.user.role,
-      createdAt: new Date().toISOString()
+    files.forEach(function (f) {
+      // Browsers send the name as latin1, this converts it back so names like "नोट्स.pdf" stay correct
+      const originalName = path.basename(Buffer.from(f.originalname, 'latin1').toString('utf8'));
+      items.push({
+        id: db.newId(), type: 'file',
+        name: makeUniqueName(originalName, parent.id, items),
+        storedName: f.filename, size: f.size, mime: f.mimetype,
+        subjectId: parent.subjectId, section: parent.section, parentId: parent.id,
+        uploadedBy: req.user.id, uploaderName: req.user.name, uploaderRole: req.user.role,
+        createdAt: new Date().toISOString()
+      });
+
+      // Also upload file bytes to Supabase Storage bucket so all teammates can access it
+      if (db.isSupabaseEnabled()) {
+        try {
+          const filePath = path.join(db.UPLOAD_DIR, f.filename);
+          const fileBuffer = fs.readFileSync(filePath);
+          db.supabase.storage.from('uploads').upload(f.filename, fileBuffer, {
+            contentType: f.mimetype,
+            upsert: true
+          }).then(function (res) {
+            if (res.error) console.warn('[Supabase Storage] Notice:', res.error.message);
+            else console.log('[Supabase Storage] Uploaded real file to cloud:', f.filename);
+          }).catch(function (err) {
+            console.warn('[Supabase Storage] Cloud upload error:', err.message);
+          });
+        } catch (e) {
+          console.warn('[Supabase Storage] File read warning:', e.message);
+        }
+      }
     });
-  });
   db.writeData('items', items);
   res.json({ success: true, message: files.length + ' file(s) uploaded successfully.' });
 });

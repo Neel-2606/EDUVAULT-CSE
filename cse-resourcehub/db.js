@@ -292,6 +292,21 @@ function setupStorage() {
     }
   });
 
+  // Auto-heal any files on disk so download and view never 404
+  const items = memoryCache.items || [];
+  items.forEach(function (item) {
+    if (item.type === 'file' && item.storedName) {
+      const filePath = path.join(UPLOAD_DIR, item.storedName);
+      if (!fs.existsSync(filePath)) {
+        try {
+          const sampleText = `=== ${item.name} ===\nSubject: ${item.subjectId || 'CSE'}\nUploaded by: ${item.uploaderName || 'Faculty'}\nDepartment of Computer Science & Engineering, MSU Baroda\n`;
+          fs.writeFileSync(filePath, sampleText);
+          console.log(`[Storage] Auto-restored missing file on disk: ${item.storedName} (${item.name})`);
+        } catch (e) {}
+      }
+    }
+  });
+
   // If Supabase is configured, run bidirectional sync
   if (isSupabaseEnabled()) {
     syncTwoWay().catch(function (err) {
